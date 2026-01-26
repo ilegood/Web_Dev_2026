@@ -1,0 +1,97 @@
+/* 1. 전체 선택자 */
+* {
+  color: rgb(231, 139, 18);
+}
+
+/* 2. 태그 선택자 */
+p {
+  color: goldenrod;
+}
+
+/* 3. 클래스 선택자 */
+.notice {
+  background: black;
+}
+
+/* 4. 아이디 선택자 */
+#only-one {
+  background: green;
+}
+
+/* 5. 그룹 선택자 */
+.group-a,
+.group-b {
+  background: yellow;
+}
+
+/* 6. 조합 선택자 */
+.combo p {
+  color: blue;
+}
+.combo > p {
+  background: red;
+}
+
+/* 형제 선택자 + : 바로 다음 / ~ : 뒤에 있는 모든 */
+#sib + .sib {
+  background: orange;
+}
+#sib ~ .sib {
+  color: black;
+}
+
+/* 7. 속성 선택자 */
+input[type="text"] {
+  background: rgb(0, 0, 0);
+}
+
+/* 8. 상태/반응 선택자 */
+.btn:hover {
+  background: black;
+}
+input:checked + label {
+  color: purple;
+}
+input:focus {
+  background: lightblue;
+}
+.btn:disabled {
+  background: silver;
+}
+
+/* 9. 구조 선택자 */
+.list li:first-child {
+  background: cyan;
+}
+.list :last-child {
+  background: blue;
+}
+.list li:nth-child(2) {
+  background: green;
+}
+.list li:nth-child(even) {
+  color: red;
+}
+
+/* 10. 가상 요소 선택자 */
+.badge::before {
+  content: "NEW";
+  background: red;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+}
+.badge::after {
+  content: "TIME OFF";
+  background: black;
+  color: white;
+  font-weight: bold;
+}
+
+/* 11. :is, :where */
+:is(header, footer) a {
+  color: cyan;
+}
+:where(header, footer) a {
+  background: red;
+}

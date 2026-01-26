@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+J+Guides:ital@0;1&display=swap");
+.ff1 {
+  font-family: "Playwrite GB J Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.ff2 {
+  font-family: serif;
+}
+.fp1 {
+  font-size: 20px;
+}
+/* em과 rem의 차이, em은 지정된 값을 기준으로 *2 크기 / rem은 기본 값을 기준으로 *2 크기
+   em 보다는 rem 을 더 선호 */
+.fp2 {
+  font-size: 2em;
+}
+.fp3 {
+  font-size: 2rem;
+}
+/* 웹사이트 크기에 따른 폰트 크기 차가 심함 */
+.fp4 {
+  font-size: 2vw;
+}
+/* clamp ( 최소값, 기준값, 최대값 ) */
+.fs5 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+.fs5 {
+  font-weight: bold;
+}

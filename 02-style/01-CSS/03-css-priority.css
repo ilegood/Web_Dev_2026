@@ -1,0 +1,39 @@
+/* 나중 입력이 더 우선순위가 높다. */
+.rule-test h2 {
+  color: green;
+}
+
+/* Id가 Class 보다 우선순위가 높다. */
+#priority {
+  background: red;
+  color: black;
+}
+
+.box {
+  background: green;
+  color: white;
+}
+
+/* 태그 < 클래스 < 아이디 < 인라인 < !important( 가급적 사용 금지 ) */
+
+/* is - ( Id, 클래스, 속성, 가상클래스, 태그, 가상요소 에 따라 다름 ) /where - 항상 낮은 순위 */
+/* where은 항상 낮기 때문에 처음 초기 세팅 시 사용 */
+:where(.is-where) {
+  background: pink;
+}
+/* is는 안의 선택자 중 가장 높은 점수를 가져옴 */
+:is(.is-where) {
+  background: cyan;
+}
+
+/* CSS 변수 */
+/* (1) :root에 기본 테마 변수 정의
+   (2) 페이지 내부에서 필요한 값만 재정의 */
+:root {
+  --primary: #ffc0fb;
+  --logocolor: #6c6ae7;
+}
+.theme {
+  color: var(--primary);
+  background: var(--logocolor);
+}

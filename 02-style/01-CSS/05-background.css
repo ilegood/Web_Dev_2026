@@ -1,0 +1,29 @@
+.box {
+  height: 150px;
+  border: 4px dashed;
+  padding: 20px;
+  margin: 20px;
+  background-color: violet;
+}
+.bg-clip {
+  background-clip: content-box;
+}
+.Padding-box {
+  background-clip: Padding-box;
+}
+.Border-box {
+  background-clip: border-box;
+}
+.bg-image {
+  background-image: url(../../01-html/assets/Puffin.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+.bg-gradient {
+  background: linear-gradient(90deg, rgb(255, 194, 136), rgb(250, 74, 206));
+}
+.bg-gradient2 {
+  background: radial-gradient(circle, rgb(255, 143, 212), rgb(156, 23, 209));
+}

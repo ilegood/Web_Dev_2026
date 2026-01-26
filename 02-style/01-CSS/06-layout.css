@@ -1,0 +1,17 @@
+.box {
+  background-color: lightblue;
+  border: 2px solid;
+  margin: 10px;
+}
+.fixed {
+  width: 200px;
+  height: 100px;
+}
+.percent {
+  width: 50%;
+  height: 50%;
+}
+.parent {
+  background-color: pink;
+  height: 200px;
+}
