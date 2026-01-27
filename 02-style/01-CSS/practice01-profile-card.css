@@ -1,15 +1,17 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 body {
-  height: 70vw;
+  height: 100vh;
+  padding-top: 30px;
   background: linear-gradient(135deg, #ff8a00, rgb(255, 96, 68), #ff3d6e);
 }
 .box {
   width: 280px;
   height: 360px;
   margin: auto;
-  margin-top: 30px;
   border: 2px solid white;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
