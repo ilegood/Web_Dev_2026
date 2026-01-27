@@ -1,0 +1,55 @@
+.container {
+  background-color: #f0f0f0;
+  border: 1px, solid, #ccc;
+  padding: 1rem;
+  display: flex;
+  gap: 20px;
+}
+.item {
+  background-color: white;
+  border: 2px, solid, #333;
+  padding: 1rem;
+  text-align: center;
+}
+.fd {
+  flex-direction: row;
+}
+.ja {
+  height: 300px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.fw {
+  height: 400px;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.fw .item {
+  width: 100px;
+  height: 100px;
+}
+.as {
+  height: 300px;
+}
+.as .self-start {
+  align-self: start;
+}
+.as .self-center {
+  align-self: center;
+}
+.as .self-end {
+  align-self: end;
+}
+.order1 {
+  order: 2;
+}
+.grow-1 {
+  flex-grow: 1;
+}
+.grow-2 {
+  flex-grow: 2;
+}
+.grow-3 {
+  flex-grow: 3;
+}
