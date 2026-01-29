@@ -1,0 +1,21 @@
+// 같은 유형을 일일히 복붙하지 않고 만드는 법
+%templete {
+  border: 2px dashed;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+}
+.success {
+  @extend %templete;
+  background-color: green;
+}
+.warning {
+  @extend %templete;
+  background-color: orange;
+}
+.error {
+  @extend %templete;
+  background-color: red;
+}
