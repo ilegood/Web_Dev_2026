@@ -1,0 +1,98 @@
+body {
+  background-color: coral;
+  color: yellow;
+}
+/* max-width: 가로 넓이 최대 ~~px 까지라면 / 데스크탑 기준 */
+@media (max-width: 1000px) {
+  body {
+    color: white;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    color: black;
+  }
+}
+/* min-width: 가로 넓이 최소 ~~px 이상이라면 / 모바일 기준 */
+@media (min-width: 1000px) {
+  body {
+    background-color: white;
+  }
+}
+@media (min-width: 1500px) {
+  body {
+    background-color: lightskyblue;
+  }
+}
+
+/* Flex-예시 */
+.flex-container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  text-align: center;
+}
+.flex-container .item {
+  background-color: #333;
+}
+@media (min-width: 800px) {
+  .flex-container {
+    flex-direction: row;
+  }
+  .flex-container .item {
+    flex-grow: 1;
+  }
+}
+
+/* Grid 예시 */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.grid-container .item {
+  background-color: #333;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+@media (min-width: 800px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1600px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 2400px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* aspect-ratio 예시 */
+.ratio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit minmax(240px, 1fr));
+  gap: 10px;
+}
+.ratio-card {
+  background-color: #333;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ratio-card:first-child {
+  aspect-ratio: 16 / 9;
+}
+.ratio-card:nth-child(2) {
+  aspect-ratio: 4 / 3;
+}
+.ratio-card:last-child {
+  aspect-ratio: 1 / 1;
+}

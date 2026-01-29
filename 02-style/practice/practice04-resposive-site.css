@@ -1,0 +1,143 @@
+/* header */
+header {
+  text-align: center;
+  padding-top: 40px;
+}
+.logo {
+  font-weight: bold;
+  font-size: 52px;
+  margin-bottom: 50px;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+}
+a {
+  text-decoration: none;
+  color: gray;
+  font-size: 26px;
+}
+
+/* Section 1 */
+h1 {
+  padding-top: 40px;
+  font-size: 68px;
+  font-weight: bold;
+  text-align: center;
+}
+h2 {
+  padding-top: 40px;
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Section 2 */
+.circle {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  justify-content: center;
+  justify-items: center;
+  margin: 30px;
+  gap: 20px;
+}
+.keyword {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+.keyword:first-of-type {
+  background-color: rgb(187, 73, 73);
+}
+.keyword:nth-of-type(2) {
+  background-color: rgb(228, 105, 56);
+}
+.keyword:nth-of-type(3) {
+  background-color: rgb(95, 182, 177);
+}
+.keyword:nth-of-type(4) {
+  background-color: rgb(101, 139, 197);
+}
+
+/* Section 3 */
+.card {
+  background-color: white;
+  border: 1px solid #eee;
+  padding: 30px;
+}
+.image {
+  background-image: url(../content.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 1.5 / 1;
+}
+h3 {
+  padding-top: 14px;
+  font-weight: bold;
+  font-size: 24px;
+}
+p {
+  padding-top: 14px;
+  font-size: 20px;
+}
+
+/* Media Query */
+@media (min-width: 1100px) {
+  nav {
+    gap: 200px;
+  }
+  .circle {
+    grid-template-columns: repeat(2, 500px);
+    gap: 50px;
+  }
+  .keyword {
+    width: 320px;
+    height: 320px;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 2200px) {
+  header {
+    text-align: start;
+    padding: 50px;
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 60px;
+    margin-bottom: -45px;
+  }
+  nav {
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+    padding-bottom: 60px;
+  }
+  a {
+    font-size: 36px;
+  }
+  .circle {
+    grid-template-columns: repeat(4, 400px);
+    gap: 200px;
+    margin-bottom: 50px;
+  }
+  .keyword {
+    width: 400px;
+    height: 400px;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
