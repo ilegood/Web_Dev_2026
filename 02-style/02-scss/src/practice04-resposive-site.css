@@ -75,7 +75,7 @@ h2 {
   padding: 30px;
 }
 .image {
-  background-image: url(../content.jpg);
+  background-image: url(../src/content.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   aspect-ratio: 1.5 / 1;
@@ -91,7 +91,8 @@ p {
 }
 
 /* Media Query */
-@media (min-width: 1100px) {
+/*
+@media (min-width: 720px) {
   nav {
     gap: 200px;
   }
@@ -108,7 +109,7 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 2200px) {
+@media (min-width: 1024px) {
   header {
     text-align: start;
     padding: 50px;
@@ -141,3 +142,4 @@ p {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+*/

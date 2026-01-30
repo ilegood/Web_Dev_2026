@@ -1,0 +1,65 @@
+// 같은 유형을 일일히 복붙하지 않고 만드는 법
+/*
+%templete {
+  border: 2px dashed;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+}
+*/
+@mixin btn($bg) {
+  border: 2px dashed;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: $bg;
+  color: white;
+}
+.success {
+  @include btn(green);
+}
+.warning {
+  @include btn(orange);
+}
+.error {
+  @include btn(red);
+}
+
+@mixin smDevice {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+@mixin mdDevice {
+  @media (min-width: 760px) {
+    @content;
+  }
+}
+@mixin lDevice {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin xlDevice {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+body {
+  @include smDevice {
+    background-color: blue;
+  }
+  @include mdDevice {
+    background-color: red;
+  }
+  @include lDevice {
+    background-color: purple;
+  }
+  @include xlDevice {
+    background-color: pink;
+  }
+}
