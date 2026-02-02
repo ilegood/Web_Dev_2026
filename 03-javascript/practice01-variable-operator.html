@@ -19,7 +19,7 @@
       <li>
         킬로그램(kg)을 파운드(lb)로 환산하여 console에 출력하시오. (1kg = 2.2lb)
         <script>
-          let kg = 1;
+          const kg = 1;
           console.log(`킬로그램 : ${kg}, 파운드 : ${kg * 2.2}`);
         </script>
       </li>
@@ -27,7 +27,7 @@
       <li>
         제곱미터(㎡)를 평(평수)으로 환산하여 출력하시오. (1㎡ = 0.3평)
         <script>
-          let m = 1;
+          const m = 1;
           console.log(`제곱미터 : ${m}, 평 : ${m * 0.3}`);
         </script>
       </li>
@@ -35,9 +35,9 @@
       <li>
         사다리꼴의 넓이를 구하시오. (윗변 + 밑변) / 2 * 높이
         <script>
-          let up = 1;
-          let down = 2;
-          let height = 3;
+          const up = 1;
+          const down = 2;
+          const height = 3;
           console.log(
             `윗변 : ${up}, 밑변 : ${down}, 높이 : ${height}, 넓이 : ${((up + down) / 2) * height}`,
           );
@@ -49,7 +49,7 @@
         <script>
           const deposits = 12000000;
           const annual = 0.04;
-          console.log(`월 이자 : ${(deposits * ANNUAL) / 12}원`);
+          console.log(`월 이자 : ${(deposits * annual) / 12}원`);
         </script>
       </li>
 
@@ -60,7 +60,7 @@
           const coffee = 5500;
           const money = 15000;
           console.log(
-            `최대 잔 수 : ${parseInt(money / COFFEE)}잔, 잔돈 : ${money % COFFEE}원`,
+            `최대 잔 수 : ${parseInt(money / coffee)}잔, 잔돈 : ${money % coffee}원`,
           );
         </script>
       </li>
@@ -71,24 +71,28 @@
         <script>
           const food = 12000;
           const drink = 2000;
-          console.log(FOOD * 64 + DRINK * 6 - parseInt(64 / 10) * DRINK);
+          console.log(
+            `총 지불 금액 : ${food * 64 + drink * 6 - parseInt(64 / 10) * drink}원`,
+          );
         </script>
       </li>
 
       <li>
         두 자리 정수(예: 73)의 각 자릿수를 더한 값을 구하시오. (7 + 3 = 10)
         <script>
-          let x = 26;
-          console.log((x % 10) + parseInt(x / 10));
+          const x = 26;
+          console.log(
+            `X = ${x}, X의 각 자릿수의 합 : ${(x % 10) + parseInt(x / 10)}`,
+          );
         </script>
       </li>
 
       <li>
         이름, 나이, 취미를 변수로 저장한 후 소개 문장을 console에 출력하시오.
         <script>
-          let name = "황지민";
-          let age = 22;
-          let hobby = "게임";
+          const name = "황지민";
+          const age = 22;
+          const hobby = "게임";
           console.log(
             `제 이름은 ${name}이고, 나이는 ${age}살이며, 취미는 ${hobby}입니다.`,
           );
@@ -99,8 +103,8 @@
         문자열 "100"과 숫자 100의 비교 결과를 `==`와 `===`로 비교하고 결과를
         console에 출력하시오.
         <script>
-          let string = "100";
-          let number = 100;
+          const string = "100";
+          const number = 100;
           console.log(string == number);
           console.log(string === number);
         </script>
