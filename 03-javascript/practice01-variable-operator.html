@@ -47,8 +47,8 @@
       <li>
         예금 12,000,000원을 연이율 4%로 정기예금했을 때 월 이자를 구하시오.
         <script>
-          let deposits = 12000000;
-          const ANNUAL = 0.04;
+          const deposits = 12000000;
+          const annual = 0.04;
           console.log(`월 이자 : ${(deposits * ANNUAL) / 12}원`);
         </script>
       </li>
@@ -57,8 +57,8 @@
         아이스 아메리카노 한 잔 5,500원, 가진 돈이 15,000원일 때 최대 몇 잔,
         잔돈은 얼마?
         <script>
-          const COFFEE = 5500;
-          let money = 15000;
+          const coffee = 5500;
+          const money = 15000;
           console.log(
             `최대 잔 수 : ${parseInt(money / COFFEE)}잔, 잔돈 : ${money % COFFEE}원`,
           );
@@ -69,8 +69,8 @@
         양꼬치 1인분 12,000원, 음료수 2,000원. 양꼬치 64인분, 음료 6개.
         10인분마다 음료 1개 서비스. 총 지불 금액?
         <script>
-          const FOOD = 12000;
-          const DRINK = 2000;
+          const food = 12000;
+          const drink = 2000;
           console.log(FOOD * 64 + DRINK * 6 - parseInt(64 / 10) * DRINK);
         </script>
       </li>
