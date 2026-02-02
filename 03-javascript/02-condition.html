@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>조건문</h1>
+    <h2>1. if / else</h2>
+    <script>
+      // if(조건) { 조건이 true } else { 조건이 false } / else는 생략 가능
+      let age = 7;
+      if (age > 19) {
+        console.log("성인");
+      } else {
+        console.log("미성년자");
+      }
+
+      // 삼항 연산자 : 항이 3개인 연산자 ( 조건 ? 조건 = true : 조건 = false )
+      console.log(age > 19 ? "성인" : "미성년자");
+    </script>
+
+    <h2>2. else if</h2>
+    <script>
+      // if (조건1) { 조건1 = true } else if (조건2) { 조건2 = true } else { 조건 = false }
+      if (age > 19) {
+        console.log("성인");
+      } else if (age > 13) {
+        console.log("청소년");
+      } else if (age > 7) {
+        console.log("어린이");
+      } else {
+        console.log("유아");
+      }
+
+      let result;
+      console.log(
+        age > 19
+          ? (result = "성인")
+          : age > 13
+            ? (result = "청소년")
+            : age > 7
+              ? (result = "어린이")
+              : (result = "유아"),
+      );
+      console.log(result);
+    </script>
+
+    <h2>3. switch</h2>
+    <script>
+      // switch(데이터) { case 조건A(값) 조건A가 true break; case 조건B(값) 조건B가 true break; default: 모든 조건이 fasle}
+      /*
+      switch (number % 2) {
+        case 0:
+          console.log("짝수");
+          break;
+        case 1:
+          console.log("홀수");
+          break;
+        default:
+          console.log("숫자가 아닙니다");
+      }
+          */
+    </script>
+
+    <h2>4. 중첩 if</h2>
+    <script>
+      /*
+     id = prompt("아이디를 입력하세요");
+      if (id === "user1") {
+        password = prompt("비밀번호를 입력하세요");
+        if (password === "1234") {
+          console.log("로그인 성공");
+        } else {
+          console.log("비밀번호가 틀렸습니다");
+        }
+      } else {
+        console.log("아이디가 틀렸습니다");
+      }
+        */
+    </script>
+
+    <h2>5. break가 없는 switch</h2>
+    <script>
+      // 조건이 true인 값부터 끝까지 출력함
+      let fruit = "apple";
+      switch (fruit) {
+        case "apple":
+          console.log("사과");
+        case "banana":
+          console.log("바나나");
+        case "orange":
+          console.log("오렌지");
+        case "kiwi":
+          console.log("키위");
+      }
+    </script>
+  </body>
+</html>
