@@ -72,8 +72,10 @@
         <script>
           const dupArr = [1, 2, 2, 3, 3, 3];
           // [1, 2, 3]
-          const dupArrUnique = new Set(dupArr);
-          console.log(dupArrUnique);
+          const a = new Set(dupArr);
+          const b = [...a];
+          const totalArr = [dupArr, b];
+          console.log(totalArr);
         </script>
       </li>
     </ol>
