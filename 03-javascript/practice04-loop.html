@@ -22,8 +22,8 @@
         구구단 2단을 출력하시오.
         <script>
           console.log("구구단 2단");
-          for (let i = 2; i <= 18; i += 2) {
-            console.log(i);
+          for (let i = 1; i <= 9; i++) {
+            console.log(`2 x ${i} = ${i * 2}`);
           }
         </script>
       </li>
@@ -96,7 +96,7 @@
         break와 continue를 사용하여 1~10 사이 홀수만 출력하되, 7이 나오면
         멈추도록 구현하시오.
         <script>
-          console.log("홀수만 7에서 멈춤");
+          console.log("홀수만 출력, 7에서 멈춤");
           for (let i = 1; i <= 10; i++) {
             if (i % 2 === 0) continue;
             if (i === 9) break;
