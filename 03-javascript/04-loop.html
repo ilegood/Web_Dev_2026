@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>반복문</h2>
+    <script>
+      // for (초기값; 조건; 증감식) { 반복문 조건에 해당되는 만큼 실행 }
+      for (let i = 1; i <= 10; i++) {
+        console.log(i);
+      }
+    </script>
+
+    <h2>1. 전위/후위 연산자</h2>
+    <script>
+      let num = 1;
+      num++; // num = num + 1; 와 같음 / ++num;
+      console.log(num);
+      num--; // num = num - 1; 와 같음 / --num;
+      console.log(num);
+      // ++num, --num = 전위 연산자 / num++, num-- = 후위 연산자
+      console.log(++num); // 전위 연산자 : 선 계산 후 출력
+      console.log(num++); // 후위 연산자 : 선 출력 후 계산
+      console.log(num);
+      // 마이너스도 마찬가지
+      console.log(--num);
+      console.log(num--);
+      console.log(num);
+    </script>
+
+    <h2>복합 대입 연산자</h2>
+    <script>
+      num += 3; // num = num +3; 와 같음
+      num -= 3; // num = num -3; 와 같음
+      num *= 3; // num = num *3; 와 같음
+      num /= 3; // num = num /3; 와 같음
+    </script>
+
+    <h2>3. 배열과 for문</h2>
+    <script>
+      const movies = [
+        "만약에 우리",
+        "신의악단",
+        "아바타:불과 재",
+        "시스터",
+        "하우스메이드",
+      ];
+      for (let i = 0; i <= 4; i++) {
+        console.log(movies[i]);
+      }
+
+      // for .. in = for (인덱스 in 배열) {}
+      for (let index in movies) {
+        console.log(movies[index]);
+      }
+
+      // for .. of : for (값 of 배열) {}
+      for (const value of movies) {
+        console.log(value);
+      }
+    </script>
+
+    <h2>4. while문</h2>
+    <script>
+      let i = 1;
+      while (i <= 10) {
+        console.log(i);
+        i++;
+      }
+
+      //무한루프
+      /*     
+        while (true) {
+        const input = prompt("종료하려면 q를 입력해주세요");
+        //break를 만나면 해당 구문을 빠져나간다
+        // if문 안에 구문이 한 줄인 경우 {} 생략 가능
+        if (input === "q") break;
+      }
+        */
+    </script>
+
+    <h2>5. break / continue</h2>
+    <script>
+      for (let i = 1; i < 10; i++) {
+        if (i === 2) continue; // 건너뜀
+        if (i === 7) break;
+        console.log(i);
+      }
+    </script>
+
+    <h2>6. 2차원 배열 + 중첩 for문</h2>
+    <script>
+      const arr = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+      console.log(arr[0]);
+      console.log(arr[0][0]);
+      console.log(arr[0][1]);
+      console.log(arr[0][2]);
+      console.log(arr[1][0]);
+      console.log(arr[1][1]);
+      console.log(arr[1][2]);
+      console.log(arr[2][0]);
+      console.log(arr[2][1]);
+      console.log(arr[2][2]);
+
+      for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+          console.log(arr[i][j]);
+        }
+      }
+
+      //for .. of
+      for (const i of arr) {
+        console.log(i);
+        for (const j of i) {
+          console.log(j);
+        }
+      }
+    </script>
+  </body>
+</html>

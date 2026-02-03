@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문 연습문제</title>
+  </head>
+  <body>
+    <h1>반복문 연습문제</h1>
+    <ol style="line-height: 2">
+      <li>
+        1부터 10까지 숫자를 출력하는 반복문을 작성하시오.
+        <script>
+          console.log("1에서 10까지");
+          for (let i = 1; i <= 10; i++) {
+            console.log(i);
+          }
+        </script>
+      </li>
+
+      <li>
+        구구단 2단을 출력하시오.
+        <script>
+          console.log("구구단 2단");
+          for (let i = 2; i <= 18; i += 2) {
+            console.log(i);
+          }
+        </script>
+      </li>
+
+      <li>
+        1부터 사용자에게 입력받은 숫자까지의 합을 출력하시오. (prompt 사용)
+        <script>
+          console.log("입력받은 숫자까지 출력");
+          X = prompt("숫자를 입력해주세요");
+          for (let i = 1; i <= X; i++) {
+            console.log(i);
+          }
+        </script>
+      </li>
+
+      <li>
+        1부터 100까지의 수 중 3의 배수만 출력하시오.
+        <script>
+          console.log("3의 배수");
+          for (let i = 1; i <= 100; i++) {
+            if (i % 3 === 0) {
+              console.log(i);
+            }
+          }
+        </script>
+      </li>
+
+      <li>
+        주어진 숫자 배열에서 짝수만 출력하는 반복문을 작성하시오.
+        <script>
+          console.log("짝수만 출력");
+          const numbers = [12, 7, 9, 20, 33, 16];
+          for (const value of numbers) {
+            if (value % 2 === 0) {
+              console.log(value);
+            }
+          }
+        </script>
+      </li>
+
+      <li>
+        주어진 문자열 배열에서 글자 수가 3자 이상인 단어만 출력하시오.
+        <script>
+          console.log("3글자 이상만 출력");
+          const words = ["오므라이스", "라면", "불고기", "된장찌개", "김밥"];
+          for (const value of words) {
+            if (value.length >= 3) {
+              console.log(value);
+            }
+          }
+        </script>
+      </li>
+
+      <li>
+        배열에서 가장 큰 숫자를 찾아 출력하시오.
+        <script>
+          console.log("가장 큰 수");
+          const nums = [3, 45, 21, 99, 18, 77];
+          let max = nums[0];
+          for (const value of nums) {
+            if (value > max) {
+              max = value;
+            }
+          }
+          console.log(max);
+        </script>
+      </li>
+
+      <li>
+        break와 continue를 사용하여 1~10 사이 홀수만 출력하되, 7이 나오면
+        멈추도록 구현하시오.
+        <script>
+          console.log("홀수만 7에서 멈춤");
+          for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 0) continue;
+            if (i === 9) break;
+            console.log(i);
+          }
+        </script>
+      </li>
+    </ol>
+  </body>
+</html>
