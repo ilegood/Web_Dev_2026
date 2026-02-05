@@ -12,6 +12,42 @@
     <h2>Math 객체</h2>
     <p>수학 계산 관련 함수들</p>
 
+    <h2>Date 객체</h2>
+    <p>날짜 / 시간 생성 및 조회</p>
+
+    <h2>String 객체 (자바 개념)</h2>
+    <p>문자열 관련 함수들</p>
+
+    <h2>Timer</h2>
+    <p>지연과 반복 실행</p>
+
+    <h2>JSON</h2>
+    <p>객체를 문자열로 변환하고 다시 복원</p>
+
+    <h1>BOM(Browser Object Model)</h1>
+    <p>브라우저에서 제공하는 객체 - Window 객체 : 최상위 객체</p>
+
+    <!-- 경고창 -->
+    <button type="button" onclick="alert('Hello!')">alert</button>
+    <!-- 입력창 -->
+    <button onclick="prompt('이름을 입력해주세요')">prompt</button>
+    <!-- 확인 / 취소 창 -->
+    <button onclick="confirm('정말 탈퇴하실건가요?')">confirm</button>
+    <!-- 새창 : open(주소, 새 창 여부, 창 크기 지정)  -->
+    <button
+      onclick="open('https://google.com', 'blank', 'width=500, height=500')"
+    >
+      open
+    </button>
+
+    <h2>location 객체</h2>
+    <p>현재 페이지의 URL 정보 및 이동</p>
+
+    <button onclick="location.reload()">reload</button>
+
+    <h2>history 객체</h2>
+    <button onclick="history.back()">back</button>
+    <button onclick="history.forward()">forward</button>
     <script src="./07-built-in-objects.js"></script>
   </body>
 </html>
