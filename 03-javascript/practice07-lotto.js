@@ -1,9 +1,11 @@
+let count = 0;
+
 while (true) {
   // 로또 배열
   let computerLotto = [];
   let playerLotto = [];
   let match = 0;
-  let attempt = 2; // 등 수 번호 적으면 해당 등수 나올때까지 적음
+  let attempt = 3; // 등 수 번호 적으면 해당 등수 나올때까지 적음
 
   // 로또 번호 생성 및 중복 방지
   while (computerLotto.length < 7) {
@@ -18,6 +20,8 @@ while (true) {
       playerLotto.push(random);
     }
   }
+
+  count++;
 
   // 보너스 번호 생성
   let bonus = computerLotto[computerLotto.length - 1];
@@ -37,6 +41,7 @@ while (true) {
     if (match === 6) {
       console.log("1등 당첨!");
       showMessage(computerLotto, bonus, playerLotto, match);
+      console.log(`${count}번 만에 성공하셨습니다`);
       break;
     }
   } else if (attempt === 2) {
@@ -44,6 +49,7 @@ while (true) {
       if (playerLotto.includes(bonus)) {
         console.log("2등 당첨!");
         showMessage(computerLotto, bonus, playerLotto, match);
+        console.log(`${count}번 만에 성공하셨습니다`);
         break;
       }
     }
@@ -51,18 +57,21 @@ while (true) {
     if (match === 5) {
       console.log("3등 당첨!");
       showMessage(computerLotto, bonus, playerLotto, match);
+      console.log(`${count}번 만에 성공하셨습니다`);
       break;
     }
   } else if (attempt === 4) {
     if (match === 4) {
       console.log("4등 당첨!");
       showMessage(computerLotto, bonus, playerLotto, match);
+      console.log(`${count}번 만에 성공하셨습니다`);
       break;
     }
   } else if (attempt === 5) {
     if (match === 3) {
       console.log("5등 당첨!");
       showMessage(computerLotto, bonus, playerLotto, match);
+      console.log(`${count}번 만에 성공하셨습니다`);
       break;
     }
   }
@@ -94,7 +103,7 @@ while (true) {
 
   */
 
-  showMessage(computerLotto, bonus, playerLotto, match);
+  showMessage(computerLotto, bonus, playerLotto);
 
   // 메세지 보여주기
   function showMessage(computerLotto, bonus, playerLotto) {
