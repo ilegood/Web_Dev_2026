@@ -4,34 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./practice08-dom.css" />
   </head>
   <body>
-    <h3>문제 1. 텍스트 출력</h3>
-    <div id="result1"></div>
-    <button onclick="printText()">출력하기</button>
-
-    <h3>문제 2. input 값 출력</h3>
-    <div id="result2"></div>
-    <input id="customer" placeholder="이름을 입력하세요" />
-    <button onclick="printInputValue()">출력하기</button>
-
-    <h3>문제 3. div 색상 변경</h3>
-    <style>
-      #colorBox {
-        width: 100px;
-        height: 100px;
-        background-color: black;
-        margin-bottom: 10px;
-      }
-    </style>
-    <div class="div-test" id="colorBox"></div>
-    <button onclick="changeColor()">색상 변경</button>
-
-    <h3>문제 4. 문자열 길이 출력</h3>
-    <input id="text" placeholder="글자를 입력하세요" />
-    <div id="result4"></div>
-    <button onclick="stringLength()">확인</button>
-
+    <div class="container">
+      <div id="date"></div>
+      <div id="time"></div>
+      <div id="leftTime"></div>
+      <div id="quoteEn" class="quote"></div>
+      <div id="quoteKo" class="quote"></div>
+    </div>
     <script src="./practice08-dom.js"></script>
   </body>
 </html>

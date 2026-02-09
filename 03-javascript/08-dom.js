@@ -39,3 +39,12 @@ div2.classList.contains("active");
 console.log(div2.classList.contains("active"));
 div2.classList.toggle("active");
 console.log(div2.classList.contains("active"));
+
+const testId3 = document.querySelector("#testId3");
+const p = document.createElement("p");
+p.textContent =
+  "I WANT TO GO HOME. I WANT TO PLAY GAME(DBD). I WANT TO EAT CHICKEN. AND I WANT TO WATCH YOUTUBE";
+testId3.appendChild(p);
+
+const pTarget = documet.querySelector("#testId3 p");
+pTarget.remove();

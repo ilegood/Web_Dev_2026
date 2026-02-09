@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  color: white;
+  font-weight: bold;
+}
+
+#date {
+  font-size: 22pt;
+  font-weight: bold;
+}
+
+#time {
+  font-size: 40pt;
+}
+
+#leftTime {
+  font-size: 22pt;
+}
+
+.quote {
+}
