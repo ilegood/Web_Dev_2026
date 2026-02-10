@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: navy;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      section {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>이벤트</h1>
+    <h2>1. 클릭 이벤트</h2>
+    <section>
+      <div class="box" id="click">Click!</div>
+      <div class="box" id="double">Double!</div>
+      <div class="box" id="right">Right!</div>
+      <div class="box" id="hover">Hover!</div>
+    </section>
+
+    <h2>폼 이벤트</h2>
+    <form action="">
+      <input type="text" />
+      <button type="submit">제출</button>
+    </form>
+
+    <h2>5. 이벤트 위임</h2>
+    <div class="container">
+      <img src="./assets/spy1.jpg" alt="" />
+      <img src="./assets/spy2.jpg" alt="" />
+      <img src="./assets/spy3.jpg" alt="" />
+    </div>
+    <script src="./09-event.js"></script>
+  </body>
+</html>

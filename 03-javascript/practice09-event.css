@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  border: 0;
+  gap: 10px;
+}
+
+.box {
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: navy;
+  color: tomato;
+  border: none;
+  font-size: 16pt;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.box:hover {
+  background-color: tomato;
+  color: navy;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.img {
+  margin: 20px;
+  border-radius: 100%;
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center;
+}
+.img:first-child {
+  background-image: url(./assets/spy1.jpg);
+}
+.img:nth-child(2) {
+  background-image: url(./assets/spy2.jpg);
+}
+.img:last-child {
+  background-image: url(./assets/spy3.jpg);
+}
+
+h2 {
+  min-height: 1.5em;
+  bottom: 100px;
+  font-style: italic;
+  font-size: 24px;
+}
