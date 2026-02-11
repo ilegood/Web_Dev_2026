@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mini Clicker</title>
+    <link rel="stylesheet" href="ai4.css" />
+  </head>
+  <body>
+    <div class="game">
+      <h1>💰 돈 벌기 게임</h1>
+
+      <div class="money">현재 돈 : <span id="money">0</span> 원</div>
+
+      <button id="clickBtn">💥 클릭해서 돈 벌기</button>
+
+      <h2>도구 상점</h2>
+
+      <div class="shop">
+        <div class="item">
+          <div>🛠 자동 클릭기</div>
+          <div>가격 : <span id="autoPrice">50</span></div>
+          <div>보유 : <span id="autoCount">0</span></div>
+          <button onclick="buyAuto()">구매</button>
+        </div>
+
+        <div class="item">
+          <div>⚙ 공장</div>
+          <div>가격 : <span id="factoryPrice">200</span></div>
+          <div>보유 : <span id="factoryCount">0</span></div>
+          <button onclick="buyFactory()">구매</button>
+        </div>
+      </div>
+
+      <div class="info">
+        자동 클릭기 : 초당 +1<br />
+        공장 : 초당 +5
+      </div>
+    </div>
+
+    <script src="ai4.js"></script>
+  </body>
+</html>

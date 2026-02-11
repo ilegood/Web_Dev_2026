@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Game Idea Spark</title>
+    <link rel="stylesheet" href="ai3.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🎮 Game Idea Spark</h1>
+      <p>버튼 한 번으로 게임 기획 불씨 만들기</p>
+    </header>
+
+    <main class="wrap">
+      <section class="generator">
+        <button id="generateBtn">아이디어 생성</button>
+
+        <div class="result">
+          <div><span>장르</span><b id="genre"></b></div>
+          <div><span>조작</span><b id="control"></b></div>
+          <div><span>핵심 메커닉</span><b id="mechanic"></b></div>
+          <div><span>제약</span><b id="limit"></b></div>
+        </div>
+
+        <button id="saveBtn" class="sub">보드에 저장</button>
+      </section>
+
+      <section class="board">
+        <h2>아이디어 보드</h2>
+        <ul id="ideaList"></ul>
+      </section>
+    </main>
+
+    <script src="ai3.js"></script>
+  </body>
+</html>

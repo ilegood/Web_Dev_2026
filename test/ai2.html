@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rogue Character Manager</title>
+    <link rel="stylesheet" href="ai2.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Rogue Character Manager</h1>
+      <p>로그라이크 캐릭터 간이 관리 툴</p>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>캐릭터 등록</h2>
+
+        <form id="characterForm">
+          <label
+            >이름
+            <input type="text" id="charName" />
+          </label>
+
+          <label
+            >모티브
+            <input type="text" id="charMotif" placeholder="예: 까마귀" />
+          </label>
+
+          <label
+            >공격 타입
+            <select id="attackType">
+              <option value="">선택</option>
+              <option value="melee">근접</option>
+              <option value="ranged">원거리</option>
+            </select>
+          </label>
+
+          <label
+            >기본 체력
+            <input type="number" id="hp" min="1" value="100" />
+          </label>
+
+          <label
+            >특징 메모
+            <textarea id="note"></textarea>
+          </label>
+
+          <button type="submit">등록</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>캐릭터 목록</h2>
+        <ul id="characterList"></ul>
+      </section>
+
+      <section class="panel detail">
+        <h2>상세 정보</h2>
+        <div id="detailBox">캐릭터를 선택하세요.</div>
+      </section>
+    </main>
+
+    <script src="ai2.js"></script>
+  </body>
+</html>
