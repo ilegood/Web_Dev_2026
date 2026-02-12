@@ -114,8 +114,7 @@ body {
   font-size: 14px;
 }
 #logout:hover {
-  background-color: #c5c5c5;
-  color: #242424;
+  background-color: #dfdfdf;
 }
 
 #out {
@@ -130,6 +129,5 @@ body {
 }
 
 #out:hover {
-  background-color: #eea8a8;
-  color: rgb(112, 0, 0);
+  background-color: #f7b5b5;
 }
