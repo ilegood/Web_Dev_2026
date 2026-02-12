@@ -4,6 +4,7 @@ const login = document.querySelector("#login");
 const reg = document.querySelector("#reg");
 const loginbox = document.querySelector("#loginbox");
 const welcombox = document.querySelector("#welcombox");
+const welcome = document.querySelector("#welcome");
 const email = document.querySelector(".usermail");
 const tel = document.querySelector(".usertel");
 const logout = document.querySelector("#logout");
@@ -28,7 +29,7 @@ login.addEventListener("click", () => {
   loginbox.style.display = "none";
   welcombox.style.display = "flex";
 
-  console.log(user.email);
+  welcome.textContent = `${user.username}님 환영합니다!`;
   email.textContent = user.email;
   tel.textContent = user.tel;
 });
