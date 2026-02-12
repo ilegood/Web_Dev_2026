@@ -96,7 +96,18 @@ tel.addEventListener("input", (e) => {
 });
 
 reg.addEventListener("click", () => {
+  const user = {
+    id: id.value,
+    pw: pw.value,
+    username: userName.value,
+    email: email.value,
+    tel: tel.value,
+  };
+
+  localStorage.setItem("user", JSON.stringify(user));
+
   alert("회원가입이 완료되었습니다");
+  window.location.href = "./practice11-login.html";
 });
 
 cancel.addEventListener("click", () => {
