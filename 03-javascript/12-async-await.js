@@ -28,3 +28,37 @@ document.querySelector("#promise").addEventListener("click", () => {
       promise.textContent = data;
     });
 });
+
+document.querySelector("#async").addEventListener("click", () => {
+  const result = document.querySelector("#asyncAwaResult");
+
+  const delay = (message) => {
+    new Promise((resolve) => {
+      setTimeout(() => resolve(message), 1000);
+    });
+  };
+
+  const asyncAwait = async () => {
+    const response = await delay("1초 후 실행");
+    result.textContent = response;
+    const response2 = await delat("2초 후 실행");
+    result.textContent = response;
+  };
+  asyncAwait();
+});
+
+// htt
+document.querySelector("#fetch").addEventListener("click", () => {
+  const result = document.querySelector("#fetchResult");
+
+  const fetchApi = async () => {
+    const response = await fetch("https://api.tvmaze.com/shows/1");
+    const data = await response.json();
+    console.log(data);
+    result.innerHTML = `<img src="${data.image.medium}"/>
+    <h3>${data.name}</h3>
+    <p>${data.summary}</p>
+    `;
+  };
+  fetchApi();
+});
