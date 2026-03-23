@@ -30,9 +30,11 @@
     스키마 : 테이블들을 담는 큰 공간
     프로젝트 단위로 하나의 스키마를 만들어 사용
 */
+
 -- 스키마 생성 ( DATABASE 와 SCHEMA 는 같은 기능 )
 CREATE DATABASE sample;
 CREATE SCHEMA cocktail;
+
 /*
     CREATE TABLE 테이블명(
         컬럼명 자료형(크기),
@@ -91,44 +93,54 @@ CREATE TABLE users(
 -- SELECT * FROM 테이블 명; : 테이블 명을 조회
 -- DROP TABLE 테이블 명; : 테이블 명을 삭제
 -- INSERT INTO 테이블 명 VALUES('', ...); : 테이블 명에 데이터를 추가, 테이블의 컬럼 수와 맞아야 함
-    -- 값에 NULL 을 넣으면 NULL 값의 데이터가 저장됨
+-- 값에 NULL 을 넣으면 NULL 값의 데이터가 저장됨
 
 -- 제약조건(CONSTRAINT) : 데이터 무결성을 지키기 위한 규칙
-    CREATE TABLE users(
-        id VARCHAR(50),
-        email VARCHAR(200),
-        password VARCHAR(200)
-    );
+CREATE TABLE users(
+    id VARCHAR(50),
+    email VARCHAR(200),
+    password VARCHAR(200)
+);
 
-    SELECT * FROM users;
+SELECT * FROM users;
     
-    INSERT INTO users VALUES('user01', 'user01@google.com', 'pass01');
-    INSERT INTO users VALUES(NULL, NULL, NULL);
-    INSERT INTO users VALUES('user02', 'user02@google.com', NULL);
+INSERT INTO users VALUES('user01', 'user01@google.com', 'pass01');
+INSERT INTO users VALUES(NULL, NULL, NULL);
+INSERT INTO users VALUES('user02', 'user02@google.com', NULL);
     
-    -- NOT NULL : NULL 값을 허용 X, 반드시 값이 있어야 한다
-    INSERT INTO users VALUES('user01', 'user01@google.com', 'pass01'); -- 허용된 데이터
-    INSERT INTO users VALUES(NULL, NULL, NULL); -- 허용되지 못한 데이터
+-- NOT NULL : NULL 값을 허용 X, 반드시 값이 있어야 한다
+INSERT INTO users VALUES('user01', 'user01@google.com', 'pass01'); -- 허용된 데이터
+INSERT INTO users VALUES(NULL, NULL, NULL); -- 허용되지 못한 데이터
 
-     -- UNIQUE : 중복된 값은 허용 X
-    INSERT INTO users VALUES('user01', 'user01@google.com', 'pass01'); -- 허용된 데이터
-    INSERT INTO users VALUES('user01', 'user02@google.com', 'pass02'); -- 허용되지 못한 데이터
+-- UNIQUE : 중복된 값은 허용 X
+INSERT INTO users VALUES('user01', 'user01@google.com', 'pass01'); -- 허용된 데이터
+INSERT INTO users VALUES('user01', 'user02@google.com', 'pass02'); -- 허용되지 못한 데이터
 
-    -- PRIMARY KEY (PK) : 각 레코드를 구분하는 대표 값. 중복 + NULL X. 무조건 TABLE 당 한 개.
-    -- 문자열에서 사용하면 느려져, 보통 숫자 값에서 사용함
-    -- AUTO_INCREMENT : 숫자 값 자동 증가
-    CREATE TABLE users(
-	    id INT AUTO_INCREMENT PRIMARY KEY,
-        email VARCHAR(200) NOT NULL UNIQUE,
-        password VARCHAR(200) NOT NULL
-    );
+-- PRIMARY KEY (PK) : 각 레코드를 구분하는 대표 값. 중복 + NULL X. 무조건 TABLE 당 한 개.   
+-- 문자열에서 사용하면 느려져, 보통 숫자 값에서 사용함
+-- AUTO_INCREMENT : 숫자 값 자동 증가
+CREATE TABLE users(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(200) NOT NULL UNIQUE,
+    password VARCHAR(200) NOT NULL
+);
 
-    CREATE TABLE  recipes(
-	    id INT AUTO_INCREMENT PRIMARY KEY,
-        name VARCHAR(50) NOT NULL,
-        image VARCHAR(200) NOT NULL,
-        description TEXT NOT NULL
-    );
+CREATE TABLE  recipes(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    image VARCHAR(200) NOT NULL,
+    description TEXT NOT NULL
+);
     
-    INSERT INTO users(email, password) -- id는 자동으로 데이터가 저장되기 때문에 id를 제외한 어떤 정보를 적을지 지정
-    VALUES('user01@google.com', 'pass01'); -- 지정한 정보 순서대로 데이터를 넣으면 됨
+INSERT INTO users(email, password) -- id는 자동으로 데이터가 저장되기 때문에 id를 제외한 어떤 정보를 적을지 지정
+VALUES('user01@google.com', 'pass01'); -- 지정한 정보 순서대로 데이터를 넣으면 됨
+
+-- FOREIGN KEY : 다른 테이블들과 연결할 때 사용
+CREATE TABLE recipes(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    image VARCHAR(200) NOT NULL,
+    description TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
