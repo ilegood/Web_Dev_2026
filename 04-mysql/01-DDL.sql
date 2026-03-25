@@ -110,6 +110,7 @@ SELECT * FROM users;
     
 INSERT INTO users VALUES('user01', 'user01@google.com', 'pass01');
 INSERT INTO users VALUES(NULL, NULL, NULL);
+
 INSERT INTO users VALUES('user02', 'user02@google.com', NULL);
     
 -- NOT NULL : NULL 값을 허용 X, 반드시 값이 있어야 한다
@@ -118,7 +119,7 @@ INSERT INTO users VALUES(NULL, NULL, NULL); -- 허용되지 못한 데이터
 
 -- UNIQUE : 중복된 값은 허용 X
 INSERT INTO users VALUES('user01', 'user01@google.com', 'pass01'); -- 허용된 데이터
-INSERT INTO users VALUES('user01', 'user02@google.com', 'pass02'); -- 허용되지 못한 데이터
+INSERT INTO users VALUES('user02', 'user02@google.com', 'pass02'); -- 허용되지 못한 데이터
 
 -- PRIMARY KEY (PK) : 각 레코드를 구분하는 대표 값. 중복 + NULL X. 무조건 TABLE 당 한 개.   
 -- 문자열에서 사용하면 느려져, 보통 숫자 값에서 사용함
@@ -209,4 +210,6 @@ VALUES(2, '미나리 소주', 'localhost:3000/soju.jpg', '요리하는 돌아이
 
 INSERT INTO users(name, email, password)
 VALUES('user02', 'user02@google.com', 'pass01');
+
+-- INT와 BIGINT의 차이 : INT는 약 21억까지의 데이터를 저장, BIGINT는 약 900경까지의 데이터를 저장
 
