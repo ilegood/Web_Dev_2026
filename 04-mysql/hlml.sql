@@ -13,8 +13,6 @@ CREATE TABLE users (
     phone_number VARCHAR(20) NOT NULL,
     profile_img VARCHAR(300),
     bio TEXT,
-    is_deleted TINYINT DEFAULT 0,
-    last_seen DATETIME,
     total_joins INT DEFAULT 0,
     cancel_count INT DEFAULT 0,
     created_at DATETIME DEFAULT NOW()
